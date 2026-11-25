@@ -1,0 +1,34 @@
+
+# Dados do projeto
+
+## Fonte
+
+O dataset utilizado é o **Steam Games Dataset 2025**, disponível no Kaggle:
+
+https://www.kaggle.com/datasets/artermiloff/steam-games-dataset
+
+Arquivo utilizado no projeto: `games_march2025_full.csv`.
+
+## Dimensões e preparação
+
+A base original possui 94.948 registros e 47 colunas. Após remover registros cuja faixa `estimated_owners` era `0 - 0`, permaneceram 81.292 registros para a análise de classificação.
+
+A variável-alvo `popularidade` foi derivada de `estimated_owners`:
+
+- 0: faixa de 0 a 20.000 proprietários;
+- 1: faixas acima de 20.000 proprietários.
+
+As variáveis de entrada do KNN são `price`, `positive` e `negative`.
+
+## Como obter os dados
+
+1. Acesse a página do dataset no Kaggle.
+2. Faça o download do arquivo disponibilizado pelo autor.
+3. Coloque o CSV no ambiente utilizado para executar o notebook.
+4. Ajuste o caminho de leitura no notebook, se necessário.
+
+## Sobre o armazenamento
+
+O arquivo original não é versionado neste repositório. Isso evita duplicar um dataset de terceiros e mantém o repositório mais leve. Consulte a página do Kaggle para obter a versão original e verificar os termos de uso definidos pelo autor.
+
+Os resultados gerados pelo projeto, como o CSV da etapa de Web Scraping, poderão ser armazenados na pasta `results/`.
